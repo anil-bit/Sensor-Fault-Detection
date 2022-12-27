@@ -1,0 +1,13 @@
+# Package Information for pkg-config
+
+prefix=/home/anil/Videos/my_project/Sensor-Fault-Detection-main/venv
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: SQLite
+Description: SQL database engine
+Version: 3.33.0
+Libs: -L${libdir} -lsqlite3
+Libs.private: -lz -lm -ldl -lpthread 
+Cflags: -I${includedir}
