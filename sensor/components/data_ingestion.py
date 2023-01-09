@@ -50,8 +50,10 @@ class DataIngestion:
             os.makedirs(dir_path,exist_ok=True)
             logging.info(f"exporting train and test file path")
             train_set.to_csv(self.data_ingestion_config.training_file_path,index=False,header=True)
-            test_set.to_cvs(self.data_ingestion_config.testing_file_path,index = False,header=True)
-            logging.info(f"")
+            test_set.to_csv(self.data_ingestion_config.testing_file_path,index = False,header=True)
+            logging.info(f"exported train and test file path")
+        except Exception as e:
+            raise SensorException(e,sys)
 
 
 
