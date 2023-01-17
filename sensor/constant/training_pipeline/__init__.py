@@ -37,7 +37,7 @@ DATA_INGESTION_FEATURE_STORE_DIR: str = "feature_store"
 DATA_INGESTION_INGESTED_DIR: str = "ingested"
 
 DATA_INGESTION_TRAIN_TEST_SPLIT_RATION: float = 0.2
-'''
+
 """
 Data Validation realted contant start with DATA_VALIDATION VAR NAME
 """
@@ -61,7 +61,7 @@ DATA_TRANSFORMATION_DIR_NAME: str = "data_transformation"
 DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR: str = "transformed"
 
 DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR: str = "transformed_object"
-
+'''
 """
 MODEL TRAINER related constant start with MODEL_TRAINER var name
 """
