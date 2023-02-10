@@ -55,3 +55,36 @@ class DataTransformationConfig:
             training_pipeline.PREPROCSSING_OBJECT_FILE_NAME,
         )
 
+class ModelTrainingConfig:
+    def __init__(self,training_pipeline_config):
+        self.model_trainer_dir = os.path.join(training_pipeline_config.artifact_dir,training_pipeline.MODEL_TRAINER_DIR_NAME)
+        self.trained_model_file_path = os.path.join(self.model_trainer_dir,training_pipeline.MODEL_TRAINER_TRAINED_MODEL_DIR,training_pipeline.MODEL_TRAINER_TRAINED_MODEL_NAME)
+        self.expected_accuracy = training_pipeline.MODEL_TRAINER_EXPECTED_SCORE
+        self.overfitting_underfitting_threshold = training_pipeline.MODEL_TRAINER_OVER_FIITING_UNDER_FITTING_THRESHOLD
+
+
+
+class ModelEvaluationConfig:
+
+    def __init__(self,training_pipeline_config):
+        self.model_evaluation_dir: str = os.path.join(training_pipeline_config.artifact_dir,training_pipeline.MODEL_EVALUATION_DIR_NAME)
+        self.report_file_path = os.path.join(self.model_evaluation_dir,training_pipeline.MODEL_EVALUATION_REPORT_NAME)
+        self.change_threshold = training_pipeline.MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE
+
+
+class ModelPusherConfig:
+
+    def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+        #creates the path for model pusher dirname
+        self.model_evaluation_dir: str = os.path.join(training_pipeline_config.artifact_dir,training_pipeline.MODEL_PUSHER_DIR_NAME)
+        #cretaes the path for model file name
+        self.model_file_path = os.path.join(self.model_evaluation_dir,training_pipeline.MODEL_FILE_NAME)
+
+        #creates the stampfile for furtur use to save the model
+        timestamp = round(datetime.now().timestamp())
+
+        #creating the full filepath for to save the modelpath
+        self.saved_model_path = os.path.join(training_pipeline.SAVED_MODEL_DIR,
+                                             F"{timestamp}",
+                                             training_pipeline.MODEL_FILE_NAME)
+

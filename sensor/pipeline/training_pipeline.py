@@ -59,6 +59,7 @@ class TrainPipeline:
 
 
     def start_model_trainer(self):
+        logging.info()
         try:
             pass
         except Exception as e:
