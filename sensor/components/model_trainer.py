@@ -11,7 +11,7 @@ from sensor.ml.model.estimator import SensorModel
 
 from sensor.utils.main_utils import save_object
 
-from sensor.entity.artifact_entity import ModelTRainerArtifact
+from sensor.entity.artifact_entity import ModelTrainerArtifact
 
 class ModelTrainer:
     def __init__(self,model_trainer_config,data_transformation_artifact):
@@ -27,6 +27,7 @@ class ModelTrainer:
         try:
             xgb_clf = XGBClassifier()
             xgb_clf.fit(x_train,y_train)
+            return xgb_clf
         except Exception as e:
             raise SensorException(e,sys)
 
@@ -73,7 +74,7 @@ class ModelTrainer:
 
             #model trainer artifact
 
-            model_trainer_artifact = ModelTRainerArtifact(trained_model_file_path=self.model_trainer_config.trained_model_file_path,
+            model_trainer_artifact = ModelTrainerArtifact(trained_model_file_path=self.model_trainer_config.trained_model_file_path,
                                                           train_metric_artifact = classification_train_metric,
                                                           test_metric_artifact=classification_test_metric)
             return model_trainer_artifact

@@ -13,6 +13,9 @@ sensor/components/__init__.py
 sensor/components/data_ingestion.py
 sensor/components/data_transformation.py
 sensor/components/data_validation.py
+sensor/components/model_evaluation.py
+sensor/components/model_pusher.py
+sensor/components/model_trainer.py
 sensor/configuration/__init__.py
 sensor/configuration/mongo_db_connection.py
 sensor/constant/__init__.py
@@ -27,6 +30,8 @@ sensor/entity/__init__.py
 sensor/entity/artifact_entity.py
 sensor/entity/config_entity.py
 sensor/ml/__init__.py
+sensor/ml/metric/__init__.py
+sensor/ml/metric/classification_metric.py
 sensor/ml/model/__init__.py
 sensor/ml/model/estimator.py
 sensor/pipeline/__init__.py

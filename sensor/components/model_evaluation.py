@@ -37,7 +37,7 @@ class ModelEvaluation:
 
             df = pd.concat([train_df,test_df])
             y_true = df[TARGET_COLUMN]
-            y_true.replace(TargetValueMapping.to_dict(),inplace=True)
+            y_true.replace(TargetValueMapping().to_dict(),inplace=True)
             df.drop(TARGET_COLUMN,axis=1,inplace=True)
 
             train_model_file_path = self.model_trainer_artifact.trained_model_file_path

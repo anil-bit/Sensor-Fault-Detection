@@ -1,3 +1,0 @@
-[ 2023-01-07 10:44:44,831 ] root - INFO - starting data ingestion
-[ 2023-01-07 10:44:44,831 ] root - INFO - exporting data from mongodb to feature store
-[ 2023-01-07 10:44:47,214 ] root - INFO - data ingestion completed: DataIngestionArtifact(trained_file_path='artifact/01_07_23_10_44_44/data_ingestion/ingested/train.csv', test_file_path='artifact/01_07_23_10_44_44/data_ingestion/ingested/test.csv')
