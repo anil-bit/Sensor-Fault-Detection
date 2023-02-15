@@ -29,7 +29,6 @@
 	bucket name: sensor-model-anil45
 	
 4. ECR repo to store/save docker image
-	#566373416292.dkr.ecr.ap-south-1.amazonaws.com/sensor-fault
 	557056666173.dkr.ecr.us-east-2.amazonaws.com/sensor-anil
 	
 5. EC2 machine  Ubuntu  Created
@@ -54,14 +53,15 @@ then run command one by one
 
 8. Setup github secrets
 
-AWS_ACCESS_KEY_ID=
+AWS_ACCESS_KEY_ID=AKIAYDMZKFI6YRWWUKVN
 
-AWS_SECRET_ACCESS_KEY=
+AWS_SECRET_ACCESS_KEY=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
 
-AWS_REGION=ap-south-1
+AWS_REGION=us-east-2
 
-AWS_ECR_LOGIN_URI=566373416292.dkr.ecr.ap-south-1.amazonaws.com
+AWS_ECR_LOGIN_URI=557056666173.dkr.ecr.us-east-2.amazonaws.com
 
-ECR_REPOSITORY_NAME=sensor-fault
+ECR_REPOSITORY_NAME=sensor-anil
 
-MONGO_DB_URL=mongodb+srv://avnish:Aa327030@cluster0.or68e.mongodb.net/admin?authSource=admin&replicaSet=atlas-desfdx-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true
+MONGO_DB_URL=mongodb+srv://anil_45:Venkatanil45@cluster0.n264b.mongodb.net/?retryWrites=true&w=majority
+
